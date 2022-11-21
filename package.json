@@ -9,6 +9,8 @@
   "author": "Brad Reaney",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^11.1.0"
+    "axe-core": "^4.5.2",
+    "cypress": "^10.1.0",
+    "cypress-axe": "^1.0.0"
   }
 }

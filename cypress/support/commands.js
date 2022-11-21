@@ -19,22 +19,11 @@
 //
 // -- This is a dual command --
 // Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-Cypress.Commands.add('performA11yTests', standards =>
-    cy.checkA11y(null, {
-        runOnly: {
-            type: 'tag',
-            values: standards
-        }
-    }, null, true)
-)
+Cypress.Commands.add('getByClassAndHref', (classType, href) =>
+  cy.get(`a[class="${classType}"][href="${href}"]`)
+);
 
-Cypress.Commands.add('checkPageA11y', (path) => {
-    cy.visit(path);
-    cy.injectAxe();
-    cy.checkA11y(null, null, callback, true);
-})
-
-export function runA11yTests(wcagOptions, impactLevel, continueOnFail) {
+Cypress.Commands.add('performA11yTests', (wcagOptions, impactLevel, continueOnFail) => {
     cy.injectAxe();
     cy.checkA11y(null, {
         runOnly: {
@@ -43,6 +32,6 @@ export function runA11yTests(wcagOptions, impactLevel, continueOnFail) {
         },
         includedImpacts: impactLevel
     }, null, continueOnFail);
-}
+})
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
