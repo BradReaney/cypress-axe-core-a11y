@@ -1,0 +1,14 @@
+{
+  "name": "cypress-axe-core-a11y",
+  "version": "1.0.0",
+  "description": "Example of the cypress-axe a11y tests on the Nimble website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brad Reaney",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^11.1.0"
+  }
+}
