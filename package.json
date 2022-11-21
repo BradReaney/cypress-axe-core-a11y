@@ -2,9 +2,10 @@
   "name": "cypress-axe-core-a11y",
   "version": "1.0.0",
   "description": "Example of the cypress-axe a11y tests on the Nimble website",
-  "main": "index.js",
+  "main": "cypress/e2e/cypress-core-a11y-e2e.cy.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cypress:open": "npx cypress open",
+    "cypress:run": "npx cypress run"
   },
   "author": "Brad Reaney",
   "license": "ISC",
@@ -12,5 +13,13 @@
     "axe-core": "^4.5.2",
     "cypress": "^10.1.0",
     "cypress-axe": "^1.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nimbleapproach/cypress-axe-core-a11y.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nimbleapproach/cypress-axe-core-a11y/issues"
+  },
+  "homepage": "https://github.com/nimbleapproach/cypress-axe-core-a11y#readme"
 }
